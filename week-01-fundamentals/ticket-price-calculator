@@ -1,0 +1,18 @@
+let age = "70";
+let numberOfTickets = 4;
+let promoCode = "BIGTIX213";
+let baseTicketPrice = 123;
+let isStudent = true;
+let isWeekday = false;
+age = Number(age)
+if (isStudent == true && isWeekday == true) {
+    baseTicketPrice -= 20;
+} else console.log("No additional discount");
+
+if (age <= 12 || age > 60) {
+    baseTicketPrice *= 0.5
+} else console.log("No Discount");
+
+let userPromocode = promoCode ?? "NONE";
+let total = baseTicketPrice * numberOfTickets;
+console.log(`Age: ${age}, Number Of Tickets: ${numberOfTickets}, Promocode: ${userPromocode}, Total: ${total}`);
